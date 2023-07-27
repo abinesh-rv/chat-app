@@ -4,6 +4,8 @@ const mongoose = require("mongoose")
 const messageRouter = require("./routes/messageRoutes")
 const userRouter = require("./routes/userRoutes")
 
+const PORT = process.env.PORT || 5500
+
 
 const app = express()
 require("dotenv").config()
@@ -23,7 +25,7 @@ mongoose.connect(`${process.env.MONGO_URL}`,{
     console.log(err.message)
 })
  
-const server = app.listen(process.env.PORT,() => {
+const server = app.listen(PORT,() => {
     console.log("server connected to port " + process.env.PORT)
 })
 
