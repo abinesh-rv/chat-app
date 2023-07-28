@@ -31,17 +31,10 @@ const server = app.listen(PORT,() => {
 
 const io = require("socket.io")(server,{
     cors:{
-     origin:["http://localhost:3000"],
+     origin:["http://localhost:3000","https://rv-chat-nef6.onrender.com/"],
      credentials : true
     }
  })
-
-// const io = socket(server,{
-//     cors :{
-//         origin:"http://localhost:3000",
-//         credentials : true
-//     }
-// })
 
 global.onlineUsers = new Map()
 
