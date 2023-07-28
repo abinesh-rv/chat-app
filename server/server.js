@@ -31,7 +31,7 @@ const server = app.listen(PORT,() => {
 
 const io = require("socket.io")(server,{
     cors:{
-     origin:["http://localhost:3000","https://rv-chat-nef6.onrender.com/"],
+     origin:["http://localhost:3000","https://rv-chat.netlify.app/"],
      credentials : true
     }
  })
