@@ -28,7 +28,7 @@ function Chat() {
 
    useEffect(() => {
     if(currentUser){
-    socket.current =io(host,{
+    socket.current =io("/",{
       withCredentials: true,
       extraHeaders: {
         "my-custom-header": "abcd"
