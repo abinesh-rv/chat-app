@@ -1,4 +1,5 @@
 export const host = "https://rv-chat-server.onrender.com"
+// export const host = "http://localhost:5500"
 export const registerRoute = `${host}/api/auth/register`
 export const loginRoute = `${host}/api/auth/login`
 export const setAvatar = `${host}/api/auth/setAvatar`
