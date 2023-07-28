@@ -28,7 +28,12 @@ function Chat() {
 
    useEffect(() => {
     if(currentUser){
-    socket.current =io(host)
+    socket.current =io(host,{
+      withCredentials: true,
+      extraHeaders: {
+        "my-custom-header": "abcd"
+      }
+    })  
     socket.current.emit("add-user",currentUser._id)
     }
    },[currentUser])
