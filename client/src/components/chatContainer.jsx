@@ -81,16 +81,16 @@ function ChatContainer({currentChat,currentUser,socket}) {
   },[messages])
 
   return (
-    <div className='relative h-[85vh] w-full flex flex-col justify-between'>
+    <div className='relative h-[95vh] md:h-[85vh] w-full flex flex-col justify-between'>
         <Logout/>
         <div className="p-3 flex items-center gap-3 capitalize">
-            <img className="w-11 h-11"  src={`data:image/svg+xml;base64,${currentChat.avatarImage}`} alt=""/>
-            <div className="text-xl tracking-wider">{currentChat.username}</div>
+            <img className="md:w-11 md:h-11 w-7 h-7"  src={`data:image/svg+xml;base64,${currentChat.avatarImage}`} alt=""/>
+            <div className="md:text-xl text-lg tracking-wider">{currentChat.username}</div>
         </div>
         <div className='h-full w-full flex flex-col gap-3 overflow-y-scroll self-start p-3 chatContainer'>
           {messages.map(msg => {
             return (
-                 <div className={`w-fit max-w-[30rem] h-fit px-2 py-1  ${msg.fromSelf ? "bg-slate-100 text-black rounded-l-full self-end " : "text-slate-100 bg-purple-700 rounded-r-full"}`}>{msg.message}</div>
+                 <div className={`w-fit md:max-w-[30rem] max-w-[12rem] text-sm md:text-base h-fit px-2 py-1  ${msg.fromSelf ? "bg-slate-100 text-black rounded-l-full self-end " : "text-slate-100 bg-purple-700 rounded-r-full"}`}>{msg.message}</div>
             )
           })}
         </div>

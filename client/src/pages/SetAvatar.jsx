@@ -80,12 +80,12 @@ function SetAvatar() {
     <>
     {
     isLoading === true ? 
-    <div className='w-fit mx-auto mt-48'><img src={loader} alt="" /></div> 
+    <div className='w-fit mx-auto md:mt-48 mt-[100px]  '><img src={loader} alt="" /></div> 
     :
     <div>
-    <div className='flex flex-col gap-10 mt-[250px] items-center'>
-        <div className='text-2xl'>Pick an avatar as your profile picture</div>
-        <div  className="flex gap-6">
+    <div className='flex flex-col gap-10  md:mt-[250px] mt-[100px] items-center'>
+        <div className='text-2xl text-center'>Pick an avatar as your profile picture</div>
+        <div  className="flex  flex-wrap gap-6 md:mx-0 mx-4 justify-center">
           {avatars.map((avatar,index) => {
             return (  
               <div key={index} className={` ${selectedAvatar === index ? "border-4 p-1 rounded-full border-violet" : ""} `}>

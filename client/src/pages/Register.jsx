@@ -91,12 +91,12 @@ function Register() {
 
   return (
     <div>
-      <div className='w-[500px] mx-auto bg-dark rounded-md mt-[200px] py-10 '>
+      <div className='md:w-[500px]  md:mx-auto mx-3  bg-dark rounded-md mt-[100px] py-10 '>
       <div className='flex items-center gap-2 text-4xl uppercase justify-center pb-5'>
         <BsChatRightDotsFill color="rgb(123, 7, 138)"/>
         <span>RVchat</span>
       </div>
-      <form className='flex flex-col mx-24 gap-6 text-gray-300' onSubmit={handleSubmit}>
+      <form className='flex flex-col md:mx-24 mx-4  gap-6 text-gray-300' onSubmit={handleSubmit}>
        <input type="text" name='username' required placeholder='username' className='rounded-md px-4 py-2 bg-dark border-2 border-violet' onChange={(e) =>handleChange(e)}/>
        <input type="text" name='email' required placeholder='email' className='rounded-md px-4 py-2 bg-dark border-2 border-violet' onChange={(e) =>handleChange(e)}/>
        <div className='rounded-md px-4 py-2 bg-dark border-2 border-violet flex justify-between items-center hover:ring-white hover:ring-1 hover:border-transparent'>

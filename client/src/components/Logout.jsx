@@ -12,7 +12,7 @@ function Logout() {
   
   return (
     <div className='p-3 text-purple-600 absolute right-0 cursor-pointer transition-all ease-in-out duration-300 hover:text-slate-300'>
-       <FaPowerOff onClick={handleLogout} size={30} />
+       <FaPowerOff onClick={handleLogout} size={25}  />
     </div>
   )
 }

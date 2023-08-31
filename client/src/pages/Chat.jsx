@@ -59,7 +59,7 @@ function Chat() {
 
   return (
     <div className='flex w-[100vw] h-[100vh] items-center justify-center'>
-    <div className='h-[85vh] w-[85vw] bg-dark rounded-md'>
+    <div className='h-[95vh] w-[95vw] md:h-[85vh] md:w-[85vw] bg-dark rounded-md'>
     {
     contactData === undefined ? "" : 
     <div className='grid grid-cols-4 h-full'>
